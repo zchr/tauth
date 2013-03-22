@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>TAuth by Zach</title>
+<link rel="stylesheet" type="text/css" href={{ url_for('static', filename='style.css') }}>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+<script type="text/javascript">
+function focusForm() {
+ document.getElementById("username-input").focus();}
+</script>
+<script type="text/javascript">
+// Popup window code
+function newPopup(url) {
+	popupWindow = window.open(
+		url,'popUpWindow','height=260,width=800,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
+}
+</script>
+</head>
+
+<body onload=focusForm()>
+
+{% if 'signed-in-user' in session %}
+<p class="successtext">Bonjour, <a href="http://twitter.com/{{ session['signed-in-user'] }}">{{ session['signed-in-user'] }}.</a> You have successfully signed in. This website uses <a href="http://flask.pocoo.org">Flask</a> <a href="http://flask.pocoo.org/docs/api/#sessions">sessions</a> and identifies you by your unique Twitter handle. <br /><br /><a href="/logout">Sign out</a></p>
+
+{% else %}
+<p class="head"> Auth with a tweet</p>
+<form action="{{ url_for('auth') }}" method="post" onsubmit=" newPopup('{{ ln }}');">	
+	
+<input name='username-input' id='username-input' placeholder='twitter handle'>
+<input type=submit id='submit-button' value="sign in">
+</form>	
+{% endif %}
+</body>
+</html>

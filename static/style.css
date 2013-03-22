@@ -1,0 +1,76 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	font-size: 50px;
+	background-color: #fff;
+	color: #000;
+	width: 700px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.head{
+	margin-top: 200px;
+	margin-bottom: 20px;
+	width: 431px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.errortext, .successtext {
+	margin-top: 70px;
+	width: 700px;
+	font-size: 40px;
+	margin-left: auto;
+	margin-right: auto;	
+}
+
+
+.errortext a, .successtext a, .errortext a:visited, .successtext a:visited {
+	color: #615482;
+	text-decoration: none;
+}
+
+.littletext {
+	font-size: 17px;
+	font-weight: 400;
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;	
+	padding: 10px;
+	color: #000;
+	line-height: 35px;
+}
+
+form {
+	width: 510px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#username-input, #username-input:hover, #username-input:active {
+	font-family: 'Open Sans', sans-serif;
+	width: 307px;
+	font-size: 30px;
+	border: none;
+	outline: none;
+	background-color: #f0f0f0;
+	border-bottom: 10px solid #dcdcdc;
+	color: #242424;
+	text-indent: 10px;
+}
+
+#submit-button {
+	font-family: 'Open Sans', sans-serif;	
+	display: inline-block;
+	-webkit-appearance: none;
+	font-size: 30px;
+	background-color: #615482;
+	border: none;
+	border-bottom: 10px solid #342c4e;
+	border-right: 10px solid #342c4e;
+	color: #fff;
+	padding-left: 43px;
+	padding-right: 43px;
+	cursor: pointer;
+}
